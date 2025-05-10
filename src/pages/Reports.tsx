@@ -35,8 +35,8 @@ const Reports: React.FC = () => {
                 <TableRow>
                   <TableCell>ID</TableCell>
                   <TableCell>File</TableCell>
-                  <TableCell>Status</TableCell>
                   <TableCell>Link</TableCell>
+                  <TableCell>Status</TableCell>
                   <TableCell>Processed Records</TableCell>
                   <TableCell>Total Records</TableCell>
                   <TableCell>Request Type</TableCell>
@@ -55,7 +55,6 @@ const Reports: React.FC = () => {
                     <TableRow key={rec?.request_id}>
                       <TableCell>{rec?.request_id}</TableCell>
                       <TableCell>{rec?.file_name}</TableCell>
-                      <TableCell>{rec?.status}</TableCell>
                       <TableCell>
                         <Link
                           href={rec?.file_path.replace(
@@ -69,6 +68,8 @@ const Reports: React.FC = () => {
                           Download
                         </Link>
                       </TableCell>
+                      <TableCell>{rec?.status}</TableCell>
+
                       <TableCell>{rec?.processed_records}</TableCell>
                       <TableCell>{rec?.total_records}</TableCell>
                       <TableCell>{rec?.request_Type}</TableCell>
