@@ -22,13 +22,14 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import useNotification from "../hooks/useToastMessage";
 import useVaccinationDrive from "../hooks/useVaccinationDriveData";
-import { classes, vaccines } from "../utils/constants";
 import { isResponseSuccess } from "../utils/helper";
 import {
+  classes,
   ErrorRespObject,
   SuccessRespObject,
   VaccineDriveFormSchema,
   VaccineDriveInfo,
+  vaccines,
 } from "../utils/types";
 
 import { useForm } from "@mantine/form";

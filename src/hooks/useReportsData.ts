@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { portal_url } from "../utils/urls";
+import { portal_url } from "../utils/api";
 import { UploadedRecordReport } from "../utils/types";
 import React from "react";
 

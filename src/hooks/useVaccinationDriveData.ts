@@ -3,11 +3,11 @@ import axios, { AxiosError } from "axios";
 import {
   ErrorRespObject,
   SuccessRespObject,
+  unknownErrorResp,
   VaccineDriveInfo,
 } from "../utils/types";
 import React from "react";
-import { portal_url } from "../utils/urls";
-import { unknownErrorObj } from "../utils/constants";
+import { portal_url } from "../utils/api";
 
 interface UseDashboardDataResult {
   data: VaccineDriveInfo[];
@@ -46,7 +46,7 @@ const useVaccinationDriveData = (): UseDashboardDataResult => {
       } catch (error) {
         const err = error as AxiosError<ErrorRespObject>;
         if (!err.response?.data) {
-          return unknownErrorObj;
+          return unknownErrorResp;
         } else {
           return err.response.data as ErrorRespObject;
         }
@@ -74,7 +74,7 @@ const useVaccinationDriveData = (): UseDashboardDataResult => {
       } catch (error) {
         const err = error as AxiosError<ErrorRespObject>;
         if (!err.response?.data) {
-          return unknownErrorObj;
+          return unknownErrorResp;
         } else {
           return err.response.data as ErrorRespObject;
         }

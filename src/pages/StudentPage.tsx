@@ -35,13 +35,15 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import useNotification from "../hooks/useToastMessage";
 import useStudent from "../hooks/useStudentData";
-import { classes, genders, vaccines } from "../utils/constants";
 import { isResponseSuccess } from "../utils/helper";
 import {
+  classes,
   ErrorRespObject,
+  genders,
   ImportRecordStatusResp,
   Student,
   SuccessRespObject,
+  vaccines,
   VaccineStudentFormSchema,
 } from "../utils/types";
 

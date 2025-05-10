@@ -1,14 +1,14 @@
 import axios, { AxiosError } from "axios";
 import React, { useState } from "react";
-import { unknownErrorObj } from "../utils/constants";
 import {
   ErrorRespObject,
   ImportRecordStatusResp,
   Student,
   SuccessRespObject,
+  unknownErrorResp,
   VaccineStudentFormSchema,
 } from "../utils/types";
-import { portal_url } from "../utils/urls";
+import { portal_url } from "../utils/api";
 
 function cleanObject(
   argObj: Record<string, string | number | boolean | null | undefined>
@@ -126,7 +126,7 @@ const useStudentData = (): UseStudentResult => {
     } catch (error: unknown) {
       const err = error as AxiosError<ErrorRespObject>;
       if (!err.response?.data) {
-        return unknownErrorObj;
+        return unknownErrorResp;
       } else {
         return err.response.data as ErrorRespObject;
       }
@@ -151,7 +151,7 @@ const useStudentData = (): UseStudentResult => {
     } catch (error) {
       const err = error as AxiosError<ErrorRespObject>;
       if (!err.response?.data) {
-        return unknownErrorObj;
+        return unknownErrorResp;
       } else {
         return err.response.data as ErrorRespObject;
       }
@@ -177,7 +177,7 @@ const useStudentData = (): UseStudentResult => {
       } catch (error) {
         const err = error as AxiosError<ErrorRespObject>;
         if (!err.response?.data) {
-          return unknownErrorObj;
+          return unknownErrorResp;
         } else {
           return err.response.data as ErrorRespObject;
         }
@@ -210,7 +210,7 @@ const useStudentData = (): UseStudentResult => {
     } catch (error) {
       const err = error as AxiosError<ErrorRespObject>;
       if (!err.response?.data) {
-        return unknownErrorObj;
+        return unknownErrorResp;
       } else {
         return err.response.data as ErrorRespObject;
       }
@@ -241,7 +241,7 @@ const useStudentData = (): UseStudentResult => {
     } catch (error) {
       const err = error as AxiosError<ErrorRespObject>;
       if (!err.response?.data) {
-        return unknownErrorObj;
+        return unknownErrorResp;
       } else {
         return err.response.data as ErrorRespObject;
       }
@@ -266,7 +266,7 @@ const useStudentData = (): UseStudentResult => {
     } catch (error) {
       const err = error as AxiosError<ErrorRespObject>;
       if (!err.response?.data) {
-        return unknownErrorObj;
+        return unknownErrorResp;
       } else {
         return err.response.data as ErrorRespObject;
       }
