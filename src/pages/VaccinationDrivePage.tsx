@@ -154,7 +154,7 @@ const VaccinationDrivePage: React.FC = () => {
     <Box>
       <Header />
       <Container maxWidth="lg" sx={{ mt: 3 }}>
-        <Stack direction="row" spacing={2} mb={2}>
+        <Stack direction="row" spacing={2} mb={2} justifyContent={"flex-end"}>
           <Button
             variant="contained"
             startIcon={<AddIcon />}
