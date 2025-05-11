@@ -34,13 +34,13 @@ const Signin: React.FC = () => {
 
     if (!formData.user) {
       newErrors.user = "Username is required";
-    } else if (formData.user !== "admin") {
+    } else if (formData.user !== "root") {
       newErrors.user = "Wrong user";
     }
 
     if (!formData.password) {
       newErrors.password = "Password is required";
-    } else if (formData.password !== "admin") {
+    } else if (formData.password !== "root") {
       newErrors.password = "Wrong password";
     }
 
@@ -70,9 +70,10 @@ const Signin: React.FC = () => {
           fontWeight: 700,
           textAlign: "center",
           mb: 3,
+          color: "black",
         }}
       >
-        Sign In <LockOutlineIcon color="secondary" />
+        <LockOutlineIcon fontSize="large" color="secondary" /> Sign In
       </Typography>
 
       <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>

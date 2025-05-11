@@ -369,7 +369,7 @@ const StudentPage: React.FC = () => {
                       size="small"
                       placeholder="Search"
                       name="roll_no"
-                      value={searchQueryObj.name}
+                      value={searchQueryObj.roll_no}
                       onChange={handleChangeQuery}
                       slotProps={{
                         input: {

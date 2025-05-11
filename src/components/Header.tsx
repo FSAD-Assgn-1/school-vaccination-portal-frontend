@@ -59,18 +59,20 @@ const Header: React.FC = () => {
         <Box sx={{ flexGrow: 1, display: "flex" }}>
           <Button
             component={Link}
-            to="/students"
+            to="/student-management"
             startIcon={<PersonIcon />}
-            variant={isActive("/students") ? "contained" : "outlined"}
+            variant={isActive("/student-management") ? "contained" : "outlined"}
             sx={{ mx: 1 }}
           >
             Student Management
           </Button>
           <Button
             component={Link}
-            to="/vaccination-drive"
+            to="/vaccination-inventory"
             startIcon={<VaccinesIcon />}
-            variant={isActive("/vaccination-drive") ? "contained" : "outlined"}
+            variant={
+              isActive("/vaccination-inventory") ? "contained" : "outlined"
+            }
             sx={{ mx: 1 }}
           >
             Drive Management

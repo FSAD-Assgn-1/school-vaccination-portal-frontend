@@ -20,9 +20,13 @@ import useReportsData from "../hooks/useReportsData";
 const limit = 5;
 
 const Reports: React.FC = () => {
-  const { loading, reports, total } = useReportsData();
+  const { loading, reports, total, fetchReports } = useReportsData();
 
   const [page, setPage] = useState(1);
+
+  React.useEffect(() => {
+    fetchReports(page);
+  }, [fetchReports, page]);
 
   return (
     <Box>

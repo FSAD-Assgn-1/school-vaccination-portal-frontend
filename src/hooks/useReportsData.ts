@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
 import axios from "axios";
+import React, { useState } from "react";
 import { portal_url } from "../utils/api";
 import { UploadedRecordReport } from "../utils/types";
-import React from "react";
 
 interface UseReportsData {
   reports: UploadedRecordReport[];
   loading: boolean;
   error: string | null;
   total: number;
+  fetchReports: (page: number) => Promise<void>;
 }
 
 const limit = 5;
@@ -37,11 +37,7 @@ const useReportsData = (): UseReportsData => {
     }
   }, []);
 
-  useEffect(() => {
-    fetchReports(1);
-  }, [fetchReports]);
-
-  return { reports, loading, error, total };
+  return { reports, loading, error, total, fetchReports };
 };
 
 export default useReportsData;

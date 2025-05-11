@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")!).render(
           }
         />
         <Route
-          path="/students"
+          path="/student-management"
           element={
             <ProtectedRoute>
               <StudentManagement />
@@ -35,7 +35,7 @@ createRoot(document.getElementById("root")!).render(
         />
 
         <Route
-          path="/vaccination-drive"
+          path="/vaccination-inventory"
           element={
             <ProtectedRoute>
               <VaccinationDriveManagement />

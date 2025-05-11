@@ -69,9 +69,8 @@ const VaccinationDrivePage: React.FC = () => {
           : null,
       drive_date: (value) =>
         value.length < 1 ? "Drive date cannot be empty" : null,
-      doses: (value) => (value < 1 ? "doses No cannot be empty" : null),
-      classes: (value) =>
-        value.length < 1 ? "Classes No cannot be empty" : null,
+      doses: (value) => (value < 1 ? "doses cannot be empty" : null),
+      classes: (value) => (value.length < 1 ? "Classes cannot be empty" : null),
     },
   });
 
