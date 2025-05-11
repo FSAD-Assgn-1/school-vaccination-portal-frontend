@@ -670,6 +670,8 @@ const StudentPage: React.FC = () => {
                     onChange(x);
                   }
                 }}
+                error={!!vaccinateForm.errors.drive_id}
+                helperText={vaccinateForm.errors.drive_id}
                 sx={{ mt: 2 }}
               />
             </DialogContent>
